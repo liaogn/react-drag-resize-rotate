@@ -1,0 +1,326 @@
+@import '../../../src/core/style/vdr.css';
+@import '../../../src/playground/demos/demo.css';
+@import '../../../src/playground/demos/preview.css';
+
+:root {
+  --ifm-color-primary: #2db7f5;
+  --ifm-color-primary-dark: #16a9eb;
+  --ifm-color-primary-darker: #119fdd;
+  --ifm-color-primary-darkest: #0e83b6;
+  --ifm-color-primary-light: #49c2f6;
+  --ifm-color-primary-lighter: #57c7f7;
+  --ifm-color-primary-lightest: #80d5fa;
+}
+
+.markdown .vdr-demo-preview {
+  margin: 20px 0;
+}
+
+.markdown .rrr-home,
+.markdown .rrr-home-section {
+  max-width: none;
+}
+
+.rrr-home {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(440px, 1.08fr);
+  gap: 44px;
+  align-items: center;
+  min-height: calc(100vh - var(--ifm-navbar-height) - 42px);
+  padding: 42px 0 34px;
+}
+
+.rrr-home__copy {
+  max-width: 680px;
+}
+
+.rrr-home__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  height: 28px;
+  padding: 0 10px;
+  border: 1px solid rgb(45 183 245 / 0.24);
+  border-radius: 999px;
+  background: rgb(45 183 245 / 0.08);
+  color: #087ea4;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.rrr-home h1 {
+  margin: 18px 0 16px;
+  color: #171a1f;
+  font-size: clamp(46px, 6vw, 76px);
+  line-height: 0.94;
+  letter-spacing: 0;
+}
+
+.rrr-home p {
+  max-width: 640px;
+  margin: 0;
+  color: #3d4652;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.rrr-home__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.rrr-home__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  height: 44px;
+  padding: 0 18px;
+  border: 1px solid #d5dbe3;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #20242b;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 1px 2px rgb(18 24 32 / 0.04);
+}
+
+.rrr-home__button:hover {
+  color: #087ea4;
+  text-decoration: none;
+  border-color: rgb(45 183 245 / 0.48);
+}
+
+.rrr-home__button--primary {
+  border-color: #1f9ed7;
+  background: #2db7f5;
+  color: #fff;
+  box-shadow: 0 10px 22px rgb(45 183 245 / 0.24);
+}
+
+.rrr-home__button--primary:hover {
+  border-color: #168fca;
+  background: #1fa8e8;
+  color: #fff;
+}
+
+.rrr-home__install {
+  display: flex;
+  align-items: center;
+  max-width: 560px;
+  min-height: 50px;
+  margin-top: 20px;
+  padding: 0 16px;
+  border: 1px solid #e3e8ef;
+  border-radius: 8px;
+  background: #f7f9fb;
+  color: #222a33;
+  box-shadow: 0 1px 2px rgb(18 24 32 / 0.04);
+}
+
+.rrr-home__install code {
+  border: 0;
+  background: transparent;
+  font-size: 14px;
+}
+
+.rrr-home__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.rrr-home__meta span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 10px;
+  border: 1px solid #e0e6ee;
+  border-radius: 999px;
+  background: #fff;
+  color: #596473;
+  font-size: 13px;
+}
+
+.rrr-home__preview {
+  position: relative;
+}
+
+.rrr-home__stage {
+  position: relative;
+  height: 380px;
+  overflow: hidden;
+  border: 1px solid #dfe6ef;
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgb(255 255 255 / 0.92), rgb(246 250 252 / 0.92)),
+    repeating-linear-gradient(0deg, transparent 0 23px, rgb(68 82 98 / 0.07) 23px 24px),
+    repeating-linear-gradient(90deg, transparent 0 23px, rgb(68 82 98 / 0.07) 23px 24px);
+  box-shadow:
+    0 24px 54px rgb(19 30 42 / 0.12),
+    inset 0 1px 0 rgb(255 255 255 / 0.9);
+}
+
+.rrr-home__grid {
+  position: absolute;
+  inset: 18px;
+  border: 2px dashed rgb(250 140 22 / 0.55);
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+.rrr-home__toolbar {
+  position: absolute;
+  z-index: 2;
+  top: 14px;
+  left: 14px;
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  height: 30px;
+  padding: 0 10px;
+  border: 1px solid rgb(17 24 39 / 0.08);
+  border-radius: 8px;
+  background: rgb(255 255 255 / 0.84);
+  backdrop-filter: blur(8px);
+}
+
+.rrr-home__toolbar span {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fa8c16;
+}
+
+.rrr-home__toolbar span:nth-child(2) {
+  background: #2db7f5;
+}
+
+.rrr-home__toolbar span:nth-child(3) {
+  background: #52c41a;
+}
+
+.rrr-home__node {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 14px;
+  color: #fff;
+  user-select: none;
+}
+
+.rrr-home__node strong {
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.rrr-home__node small {
+  margin-top: 5px;
+  font-size: 12px;
+  opacity: 0.86;
+}
+
+.rrr-home__node--image {
+  background:
+    linear-gradient(145deg, rgb(12 18 26 / 0.18), rgb(12 18 26 / 0.62)),
+    linear-gradient(135deg, #2db7f5 0%, #52c41a 100%);
+}
+
+.rrr-home__node--tag {
+  background:
+    linear-gradient(145deg, rgb(12 18 26 / 0.12), rgb(12 18 26 / 0.52)),
+    linear-gradient(135deg, #722ed1 0%, #fa8c16 100%);
+}
+
+.rrr-home-section {
+  padding: 8px 0 48px;
+}
+
+.rrr-home-section h2 {
+  margin: 0 0 18px;
+  color: #20242b;
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+.rrr-home-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.rrr-home-cards a {
+  display: flex;
+  min-height: 132px;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 18px;
+  border: 1px solid #e0e6ee;
+  border-radius: 8px;
+  background: #fff;
+  color: #20242b;
+  text-decoration: none;
+  box-shadow: 0 1px 2px rgb(18 24 32 / 0.04);
+}
+
+.rrr-home-cards a:hover {
+  border-color: rgb(45 183 245 / 0.46);
+  color: #087ea4;
+  text-decoration: none;
+}
+
+.rrr-home-cards strong {
+  font-size: 16px;
+}
+
+.rrr-home-cards span {
+  margin-top: 14px;
+  color: #687383;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@media (max-width: 996px) {
+  .rrr-home {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding-top: 28px;
+  }
+
+  .rrr-home__copy {
+    max-width: none;
+  }
+
+  .rrr-home__stage {
+    height: 360px;
+  }
+
+  .rrr-home-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .rrr-home h1 {
+    font-size: 42px;
+  }
+
+  .rrr-home p {
+    font-size: 16px;
+  }
+
+  .rrr-home__stage {
+    height: 340px;
+  }
+
+  .rrr-home__install code {
+    overflow-wrap: anywhere;
+    white-space: normal;
+  }
+}

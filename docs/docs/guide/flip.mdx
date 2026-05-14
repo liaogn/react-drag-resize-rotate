@@ -1,0 +1,11 @@
+---
+title: 翻转
+---
+
+# 翻转
+
+未设置最小尺寸时，拖拽触点越过对边会触发翻转，并调用 `onFliped`。
+
+```tsx
+<ReactDragResizeRotate onFliped={(pos) => console.log(pos.flipSign)} />
+```

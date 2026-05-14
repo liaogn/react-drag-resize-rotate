@@ -1,0 +1,19 @@
+---
+title: 嵌套
+---
+
+# 嵌套
+
+`childrens` 支持递归配置子组件；普通 JSX children 也可以直接放入内容。
+
+```tsx
+<ReactDragResizeRotate
+  w={320}
+  h={220}
+  x={40}
+  y={40}
+  childrens={[
+    { uuid: 'child-1', w: 140, h: 100, x: 40, y: 40, r: 15 },
+  ]}
+/>
+```

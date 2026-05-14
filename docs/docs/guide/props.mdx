@@ -1,0 +1,30 @@
+---
+title: Props
+---
+
+# Props
+
+| Prop | 类型 | 默认 | 说明 |
+| --- | --- | --- | --- |
+| `w` / `h` | `number` | `100` | 宽高 |
+| `x` / `y` | `number` | `0` | 相对父元素的 left / top |
+| `r` | `number` | `0` | 旋转角度（度） |
+| `z` | `number \| string` | `''` | 层级 z-index |
+| `bg` | `string` | `''` | 背景图片 URL |
+| `minWidth` / `minHeight` | `number` | `0` | 缩放最小尺寸 |
+| `maxWidth` / `maxHeight` | `number` | `Infinity` | 缩放最大尺寸 |
+| `lock` | `boolean` | `false` | 锁定宽高比 |
+| `active` | `boolean` | `true` | 是否显示激活态和控件 |
+| `activeable` | `boolean` | `true` | 是否可被激活和操作 |
+| `draggable` | `boolean` | `true` | 是否可拖动 |
+| `resizeable` | `boolean` | `true` | 是否可缩放 |
+| `rotateable` | `boolean` | `true` | 是否可旋转 |
+| `sticks` | `string[]` | 全部 9 个 | 控件子集，可选 `tl tm tr mr br bm bl ml angle` |
+| `uuid` | `string \| number` | `''` | 唯一 id，事件回传 |
+| `childrens` | `ChildConfig[]` | `undefined` | 嵌套子组件参数数组 |
+| `childWrapAttr` | `HTMLAttributes<HTMLDivElement>` | `undefined` | 嵌套时子级包裹层属性 |
+| `overflow` | `string` | `''` | 子级包裹层 overflow |
+| `stickHoverRender` | `(cursorRotate) => { x; y; htmlText }` | `undefined` | 自定义触点 hover cursor |
+| `limitX` / `limitY` | `[number, number] \| null` | `null` | 限制旋转后包围盒范围 |
+
+React 版刻意保留 Vue 版命名，包括 `childrens`、`resizeable`、`rotateable`。

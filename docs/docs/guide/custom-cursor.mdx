@@ -1,0 +1,17 @@
+---
+title: 自定义 cursor
+---
+
+# 自定义 cursor
+
+`stickHoverRender` 可以自定义触点 hover 时的 cursor 图标。
+
+```tsx
+<ReactDragResizeRotate
+  stickHoverRender={(cursorRotate) => ({
+    x: 16,
+    y: 16,
+    htmlText: `<svg style="transform:rotate(${cursorRotate}deg)" />`,
+  })}
+/>
+```

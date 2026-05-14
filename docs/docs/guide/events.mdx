@@ -1,0 +1,31 @@
+---
+title: Events
+---
+
+# Events
+
+所有事件 callback 签名一致：`(pos: PosData, event: MouseEvent) => void`。
+
+| Prop | 触发时机 |
+| --- | --- |
+| `onActivated` | 元素被激活 |
+| `onDragStart` / `onDragging` / `onDragStop` | 拖拽开始 / 中 / 结束 |
+| `onResizeStart` / `onResizing` / `onResizeStop` | 缩放开始 / 中 / 结束 |
+| `onRotateStart` / `onRotating` / `onRotateStop` | 旋转开始 / 中 / 结束 |
+| `onFliped` | 缩放越过对边触发翻转 |
+
+```ts
+interface PosData {
+  uuid: string | number
+  x: number
+  y: number
+  w: number
+  h: number
+  r: number
+  z: number | string
+  stick: '' | 'tl' | 'tm' | 'tr' | 'mr' | 'br' | 'bm' | 'bl' | 'ml' | 'angle'
+  lock: boolean
+  active: boolean
+  flipSign: '' | '+' | '-'
+}
+```

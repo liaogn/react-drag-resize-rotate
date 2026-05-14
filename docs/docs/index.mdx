@@ -1,0 +1,36 @@
+---
+slug: /
+title: react-drag-resize-rotate
+hide_table_of_contents: true
+---
+
+import HomeHero from '@site/src/components/HomeHero'
+
+<HomeHero />
+
+<section className="rrr-home-section">
+  <h2>为编辑器场景准备的核心能力</h2>
+  <div className="rrr-home-cards">
+    <a href="/react-drag-resize-rotate/examples/basic">
+      <strong>拖拽 / 缩放 / 旋转</strong>
+      <span>8 个缩放触点和 1 个旋转触点，事件实时回传位置数据。</span>
+    </a>
+    <a href="/react-drag-resize-rotate/examples/boundary">
+      <strong>边界与尺寸限制</strong>
+      <span>支持 min / max、limitX / limitY，并按旋转后的包围盒计算。</span>
+    </a>
+    <a href="/react-drag-resize-rotate/examples/nested">
+      <strong>嵌套与主题</strong>
+      <span>支持 childrens 递归节点、React children 内容和 CSS 变量换肤。</span>
+    </a>
+  </div>
+</section>
+
+```tsx
+import ReactDragResizeRotate from '@liaogn/react-drag-resize-rotate'
+import '@liaogn/react-drag-resize-rotate/style.css'
+```
+
+<a className="button button--primary" href="/react-drag-resize-rotate/guide/getting-started">
+  快速开始
+</a>

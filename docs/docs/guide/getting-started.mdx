@@ -1,0 +1,29 @@
+---
+title: 快速开始
+---
+
+# 快速开始
+
+```bash
+pnpm add @liaogn/react-drag-resize-rotate
+```
+
+```tsx
+import { useState } from 'react'
+import ReactDragResizeRotate, { type PosData } from '@liaogn/react-drag-resize-rotate'
+import '@liaogn/react-drag-resize-rotate/style.css'
+
+export default function App() {
+  const [rect, setRect] = useState({ w: 200, h: 150, x: 50, y: 50, r: 0 })
+  const update = (pos: PosData) =>
+    setRect((current) => ({ ...current, x: pos.x, y: pos.y, w: pos.w, h: pos.h, r: pos.r }))
+
+  return (
+    <ReactDragResizeRotate {...rect} onDragging={update} onResizing={update} onRotating={update}>
+      <div>drag · resize · rotate</div>
+    </ReactDragResizeRotate>
+  )
+}
+```
+
+组件只依赖 React，样式需要手动引入 `@liaogn/react-drag-resize-rotate/style.css`。
