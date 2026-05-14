@@ -33,8 +33,24 @@ export default function Demo() {
   theming: `<div style={{ '--vdr-stick-color': 'crimson' } as React.CSSProperties}>
   <ReactDragResizeRotate w={180} h={140} x={120} y={120} />
 </div>`,
-  boundary: `<ReactDragResizeRotate w={120} h={100} x={150} y={140} r={20} limitX={[10, 410]} limitY={[10, 370]} />`,
-  'nested-boundary': `<ReactDragResizeRotate w={280} h={220} x={70} y={80} limitX={[10, 410]} limitY={[10, 370]}>
-  <ReactDragResizeRotate w={120} h={90} x={30} y={30} limitX={[12, 268]} limitY={[12, 208]} />
+  boundary: `const stage = { width: 420, height: 380 }
+const boundary = getBoundary(stage.width, stage.height)
+
+<ReactDragResizeRotate
+  w={120}
+  h={100}
+  x={150}
+  y={140}
+  r={20}
+  limitX={[boundary.x0, boundary.x1]}
+  limitY={[boundary.y0, boundary.y1]}
+/>`,
+  'nested-boundary': `const stage = { width: 420, height: 380 }
+const boundary = getBoundary(stage.width, stage.height)
+const root = centerRectInBoundary(280, 220, 0, stage.width, stage.height)
+
+<ReactDragResizeRotate {...root} limitX={[boundary.x0, boundary.x1]} limitY={[boundary.y0, boundary.y1]}>
+  <ReactDragResizeRotate w={120} h={90} x={30} y={30} r={15} limitX={[12, 268]} limitY={[12, 208]} />
+  <ReactDragResizeRotate w={80} h={80} x={160} y={100} r={-10} lock limitX={[12, 268]} limitY={[12, 208]} />
 </ReactDragResizeRotate>`,
 }

@@ -1,0 +1,18 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.guideSidebar.category.指南": {
+    "message": "Guide",
+    "description": "The label for category '指南' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.API": {
+    "message": "API",
+    "description": "The label for category 'API' in sidebar 'guideSidebar'"
+  },
+  "sidebar.guideSidebar.category.示例": {
+    "message": "Examples",
+    "description": "The label for category '示例' in sidebar 'guideSidebar'"
+  }
+}
