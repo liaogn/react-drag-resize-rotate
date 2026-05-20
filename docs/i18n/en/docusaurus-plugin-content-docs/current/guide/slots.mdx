@@ -4,4 +4,10 @@ title: Children
 
 # Children
 
-React `children` are equivalent to the Vue default slot and follow the component size, position, and rotation.
+React `children` are equivalent to the Vue package's default slot and move, resize, and rotate with the component.
+
+```tsx
+<ReactDragResizeRotate w={300} h={200} x={40} y={40}>
+  <img src="/cover.jpg" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+</ReactDragResizeRotate>
+```

@@ -2,7 +2,9 @@
 node_modules/
 .codex/
 tmp/
+temp/
 tmp.*.log
+*.tgz
 
 # build artifacts
 dist/

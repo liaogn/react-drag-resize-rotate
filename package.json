@@ -1,6 +1,6 @@
 {
   "name": "@liaogn/react-drag-resize-rotate",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "description": "React component for dragging, resizing, and rotating DOM elements. Simple, dependency-free, supports nesting / aspect-lock / flipping.",
   "private": false,
   "main": "./dist/index.umd.cjs",
@@ -53,6 +53,7 @@
     "type-check": "tsc --noEmit",
     "lint": "eslint .",
     "docs:dev": "docusaurus start docs",
+    "docs:dev:en": "docusaurus start docs --locale en",
     "docs:build": "docusaurus build docs",
     "docs:preview": "docusaurus serve docs --dir build",
     "changeset": "changeset",

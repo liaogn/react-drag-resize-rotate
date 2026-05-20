@@ -4,4 +4,8 @@ title: Boundary Limits
 
 # Boundary Limits
 
-`limitX` and `limitY` constrain the rotated axis-aligned bounding box in the parent coordinate system.
+`limitX` / `limitY` constrain the rotated rectangle bounding box in the parent coordinate system.
+
+```tsx
+<ReactDragResizeRotate w={180} h={120} r={15} limitX={[20, 620]} limitY={[20, 420]} />
+```

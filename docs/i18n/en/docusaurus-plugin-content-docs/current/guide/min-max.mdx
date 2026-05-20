@@ -4,4 +4,8 @@ title: Size Limits
 
 # Size Limits
 
-Use `minWidth`, `minHeight`, `maxWidth`, and `maxHeight` to constrain resizing.
+Use `minWidth`, `minHeight`, `maxWidth`, and `maxHeight` to constrain resizing. Once minimum size is set, resizing across the opposite edge will not trigger a flip.
+
+```tsx
+<ReactDragResizeRotate minWidth={80} minHeight={80} maxWidth={240} maxHeight={200} />
+```

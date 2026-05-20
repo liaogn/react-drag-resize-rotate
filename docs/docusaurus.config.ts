@@ -2,6 +2,7 @@ import type { Config } from '@docusaurus/types'
 import { themes as prismThemes } from 'prism-react-renderer'
 
 const GITHUB = 'https://github.com/liaogn/react-drag-resize-rotate'
+const VUE_DOCS = 'https://liaogn.github.io/vue-drag-resize-rotate/'
 
 const config: Config = {
   title: 'react-drag-resize-rotate',
@@ -38,16 +39,17 @@ const config: Config = {
   ],
   themeConfig: {
     image: 'logo.png',
-    logo: {
-      alt: 'react-drag-resize-rotate',
-      src: 'logo.png',
-    },
     navbar: {
       title: 'react-drag-resize-rotate',
+      logo: {
+        alt: 'react-drag-resize-rotate',
+        src: 'logo.png',
+      },
       items: [
         { type: 'docSidebar', sidebarId: 'guideSidebar', position: 'left', label: '指南' },
         { to: '/guide/props', label: 'API', position: 'left' },
         { to: '/examples/basic', label: '示例', position: 'left' },
+        { href: VUE_DOCS, label: 'Vue 版', position: 'right' },
         { href: GITHUB, label: 'GitHub', position: 'right' },
         { type: 'localeDropdown', position: 'right' },
       ],
@@ -64,7 +66,10 @@ const config: Config = {
         },
         {
           title: 'Community',
-          items: [{ label: 'GitHub', href: GITHUB }],
+          items: [
+            { label: 'GitHub', href: GITHUB },
+            { label: 'Vue version', href: VUE_DOCS },
+          ],
         },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} liaogn. Built with Docusaurus.`,

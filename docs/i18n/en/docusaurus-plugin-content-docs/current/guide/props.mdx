@@ -4,6 +4,27 @@ title: Props
 
 # Props
 
-React keeps the same API names as the Vue package, including `childrens`, `resizeable`, and `rotateable`.
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `w` / `h` | `number` | `100` | Width and height |
+| `x` / `y` | `number` | `0` | Left / top relative to the parent element |
+| `r` | `number` | `0` | Rotation angle in degrees |
+| `z` | `number \| string` | `''` | z-index |
+| `bg` | `string` | `''` | Background image URL |
+| `minWidth` / `minHeight` | `number` | `0` | Minimum resize dimensions |
+| `maxWidth` / `maxHeight` | `number` | `Infinity` | Maximum resize dimensions |
+| `lock` | `boolean` | `false` | Lock the aspect ratio |
+| `active` | `boolean` | `true` | Whether to show active state and controls |
+| `activeable` | `boolean` | `true` | Whether the element can be activated and operated |
+| `draggable` | `boolean` | `true` | Whether the element can be dragged |
+| `resizeable` | `boolean` | `true` | Whether the element can be resized |
+| `rotateable` | `boolean` | `true` | Whether the element can be rotated |
+| `sticks` | `string[]` | All 9 handles | Visible control subset. Options: `tl tm tr mr br bm bl ml angle` |
+| `uuid` | `string \| number` | `''` | Unique id returned in events |
+| `childrens` | `ChildConfig[]` | `undefined` | Nested child component configuration |
+| `childWrapAttr` | `HTMLAttributes<HTMLDivElement>` | `undefined` | Wrapper attributes for nested children |
+| `overflow` | `string` | `''` | Overflow style for the child wrapper |
+| `stickHoverRender` | `(cursorRotate) => { x; y; htmlText }` | `undefined` | Custom cursor when hovering resize handles |
+| `limitX` / `limitY` | `[number, number] \| null` | `null` | Constrain the rotated bounding box |
 
-Main props: `w`, `h`, `x`, `y`, `r`, `z`, `bg`, `lock`, `active`, `activeable`, `draggable`, `resizeable`, `rotateable`, `sticks`, `childrens`, `childWrapAttr`, `overflow`, `stickHoverRender`, `limitX`, and `limitY`.
+The React package keeps Vue-compatible naming for `childrens`, `resizeable`, and `rotateable`.

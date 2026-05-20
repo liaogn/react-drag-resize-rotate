@@ -15,6 +15,10 @@
     "message": "Examples",
     "description": "Navbar item with label 示例"
   },
+  "item.label.Vue 版": {
+    "message": "Vue version",
+    "description": "Navbar item with label Vue 版"
+  },
   "item.label.GitHub": {
     "message": "GitHub",
     "description": "Navbar item with label GitHub"

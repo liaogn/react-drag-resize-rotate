@@ -4,13 +4,26 @@ title: Getting Started
 
 # Getting Started
 
-Install and import the stylesheet explicitly.
-
 ```bash
 pnpm add @liaogn/react-drag-resize-rotate
 ```
 
 ```tsx
-import ReactDragResizeRotate from '@liaogn/react-drag-resize-rotate'
+import { useState } from 'react'
+import ReactDragResizeRotate, { type PosData } from '@liaogn/react-drag-resize-rotate'
 import '@liaogn/react-drag-resize-rotate/style.css'
+
+export default function App() {
+  const [rect, setRect] = useState({ w: 200, h: 150, x: 50, y: 50, r: 0 })
+  const update = (pos: PosData) =>
+    setRect((current) => ({ ...current, x: pos.x, y: pos.y, w: pos.w, h: pos.h, r: pos.r }))
+
+  return (
+    <ReactDragResizeRotate {...rect} onDragging={update} onResizing={update} onRotating={update}>
+      <div>drag · resize · rotate</div>
+    </ReactDragResizeRotate>
+  )
+}
 ```
+
+The component only depends on React. Import `@liaogn/react-drag-resize-rotate/style.css` once in your app.

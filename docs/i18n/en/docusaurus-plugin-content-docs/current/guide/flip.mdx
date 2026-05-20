@@ -4,4 +4,8 @@ title: Flip
 
 # Flip
 
-Without minimum size limits, dragging a handle across the opposite edge triggers `onFliped`.
+When no minimum size is set, dragging a resize handle across the opposite edge triggers a flip and calls `onFliped`.
+
+```tsx
+<ReactDragResizeRotate onFliped={(pos) => console.log(pos.flipSign)} />
+```

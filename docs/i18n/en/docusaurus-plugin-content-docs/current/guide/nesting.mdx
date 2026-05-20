@@ -4,4 +4,16 @@ title: Nesting
 
 # Nesting
 
-Use `childrens` for recursive child rectangles, or use normal React `children` for custom content.
+`childrens` supports recursive child component configuration. Regular JSX children can also be rendered directly.
+
+```tsx
+<ReactDragResizeRotate
+  w={320}
+  h={220}
+  x={40}
+  y={40}
+  childrens={[
+    { uuid: 'child-1', w: 140, h: 100, x: 40, y: 40, r: 15 },
+  ]}
+/>
+```
